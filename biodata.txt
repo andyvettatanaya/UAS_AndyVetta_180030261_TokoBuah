@@ -1,4 +1,3 @@
 biodata
 nama    : andy vetta tanaya
 nim     : 180030261
-alamat : taman griya
