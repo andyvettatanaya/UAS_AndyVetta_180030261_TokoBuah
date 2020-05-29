@@ -1,0 +1,2 @@
+rootProject.name='TokoBuah'
+include ':app'
