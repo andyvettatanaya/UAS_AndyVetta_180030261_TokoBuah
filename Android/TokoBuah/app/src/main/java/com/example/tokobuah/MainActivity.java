@@ -5,7 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DownloadManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -38,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         menus = new ArrayList<>();
         requestQueue= Volley.newRequestQueue(this);
         parseJSON();
+
     }
 
     private void parseJSON() {
