@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Toast;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -31,11 +33,15 @@ public class MainActivity extends AppCompatActivity {
     int jumdata;
     private RequestQueue requestQueue;
 
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView=findViewById(R.id.rv_list);
+
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -45,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void parseJSON() {
+    public void parseJSON() {
         String url="https://jsonandy.000webhostapp.com/koneksi.php";
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>() {
@@ -58,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
                                 String gambarmenu = data.getString("gambar");
                                 String namamenu = data.getString("nama");
                                 String hargamenu = data.getString("harga");
-                                menus.add(new Menu(namamenu, hargamenu, gambarmenu));
+                                String keterangan = data.getString( "keterangan" );
+                                String gizimenu = data.getString( "gizi" );
+                                menus.add(new Menu(namamenu, hargamenu, gambarmenu, keterangan,gizimenu));
+
                             }
                             menuAdapter = new MenuAdapter(MainActivity.this, menus);
                             recyclerView.setAdapter(menuAdapter);

@@ -32,6 +32,8 @@
             android:layout_height="wrap_content"
             android:text="Pesan"
             android:id="@+id/btn_pesan"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
