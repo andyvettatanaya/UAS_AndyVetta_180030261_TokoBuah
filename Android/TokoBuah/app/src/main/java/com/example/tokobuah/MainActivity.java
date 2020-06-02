@@ -64,10 +64,9 @@ public class MainActivity extends AppCompatActivity {
                                 String gambarmenu = data.getString("gambar");
                                 String namamenu = data.getString("nama");
                                 String hargamenu = data.getString("harga");
-                                String keterangan = data.getString( "keterangan" );
-                                String gizimenu = data.getString( "gizi" );
+                                String keterangan = data.getString( "keterangan");
+                                String gizimenu = data.getString( "gizi");
                                 menus.add(new Menu(namamenu, hargamenu, gambarmenu, keterangan,gizimenu));
-
                             }
                             menuAdapter = new MenuAdapter(MainActivity.this, menus);
                             recyclerView.setAdapter(menuAdapter);

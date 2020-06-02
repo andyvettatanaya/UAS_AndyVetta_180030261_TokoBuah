@@ -7,33 +7,42 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:orientation="vertical"
-        android:layout_margin="16dp">
+        android:background="#dfffba">
+
         <ImageView
+            android:id="@+id/img_menu"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:id="@+id/img_menu"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/tv_nama"
-            android:text="Nama"
-            android:textSize="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_harga"
-            android:text="Harga"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pesan"
-            android:id="@+id/btn_pesan"
+            android:layout_marginTop="10dp"
+            android:text="Nama"
+            android:textColor="@android:color/black"
             android:textSize="20dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:background="@android:color/holo_green_dark"
-            android:textColor="@android:color/white"/>
+            android:text="Pesan"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
