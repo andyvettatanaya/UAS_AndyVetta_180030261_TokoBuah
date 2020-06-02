@@ -3,6 +3,7 @@ package com.example.tokobuah;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,12 +35,14 @@ public class DetailActivity extends AppCompatActivity {
         tvket = findViewById(R.id.tv_ket);
         imgambarket = findViewById(R.id.img_gambarket);
 
+        /* Menyimpan Data Ditangkap Intent. */
         String simpanama = getIntent().getStringExtra(namaket);
         String simpanharga = getIntent().getStringExtra(hargaket);
         String simpangizi = getIntent().getStringExtra(giziket);
         String simpanket = getIntent().getStringExtra(keterngan);
         String simpangambar = getIntent().getStringExtra(gambarket);
 
+        /* Set Data ke detail activity */
         tvnamaket.setText(simpanama);
         tvhargaket.setText(simpanharga);
         tvgiziket.setText(simpangizi);

@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_ket"
-            android:text="keterangan"
+            android:text="detail product"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
@@ -98,14 +98,15 @@
                     android:layout_height="wrap_content"
                     android:textSize="14dp"
                     android:layout_marginRight="16dp"
-                    android:text="Kandungan Gizi"/>
+                    android:text="Kandungan Gizi" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="14dp"
                     android:layout_weight="1"
                     android:id="@+id/tv_giziket"
-                    android:textColor="@android:color/black"/>
+                    android:text="kandungan gizi"
+                    android:textColor="@android:color/black" />
             </TableRow>
 
         </TableLayout>
