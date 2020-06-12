@@ -3,5 +3,3 @@ Project UAS : TokoBuah
 Nama : Andy Vetta Tanaya
 Kelas : JI183
 NIM : 180030261
-
-coba commits
